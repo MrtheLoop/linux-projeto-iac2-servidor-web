@@ -30,7 +30,7 @@ echo 'Baixando e descompactando aplicação web...'
 
 cd /tmp
 wget https://github.com/denilsonbonatti/linux-site-dio/archive/refs/heads/main.zip
-unzip linux-site-dio-main.zip
+unzip main.zip
 
 echo 'Arquivos baixados e descompactados...'
 
@@ -38,6 +38,7 @@ echo 'Arquivos baixados e descompactados...'
 
 echo 'Transferindo arquivos de aplicação web...'
 
+cd linux-site-dio-main
 cp -R * /var/www/html
 
 echo 'Arquivos tranferidos...'

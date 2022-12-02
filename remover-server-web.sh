@@ -10,9 +10,14 @@ echo 'Unzip removido...'
 
 echo 'Apagando arquivos de aplicação web...'
 
-cd /tmp
-rm -f linux-site-dio-main.zip
-rm -f -r linux-site-dio-main
+####Pasta TMP####
+
+rm -f -r /tmp/main.zip
+rm -f -r /tmp/systemd-private*apache2*
+
+####Pasta WWW####
+
+rm -f -r /var/www/html/*
 
 echo 'Arquivos apagados...'
 
@@ -21,6 +26,9 @@ echo 'Arquivos apagados...'
 echo 'Desinstalando servidor web...'
 
 apt-get remove apache2 -v -y
+
+cd /etc/
+rm -r -f apache2
 
 echo 'Servidor Web desinstalado...'
 
